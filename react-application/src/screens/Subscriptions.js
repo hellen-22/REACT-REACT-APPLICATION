@@ -1,7 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { Table } from "react-bootstrap";
 
 function Subscriptions() {
+  const [subscriptions, setSubscription] = useState([
+    {
+      id : 1,
+      first_name : "Hellen",
+      last_name : "Wainaina",
+      subscription : "Monthly",
+    },
+    {
+      id : 2,
+      first_name : "Gustone",
+      last_name : "Alwanga",
+      subscription : "Yearly",
+    },
+    {
+      id : 3,
+      first_name : "Wambui",
+      last_name : "Wanjiru",
+      subscription : "Daily",
+    },
+    {
+      id : 4,
+      first_name : "Naomi",
+      last_name : "Brenda",
+      subscription : "Monthly",
+    },
+    {
+      id : 5,
+      first_name : "Nelly",
+      last_name : "Brenda",
+      subscription : "Yearly",
+    },
+  ])
   return (
     <div>
       <Table striped bordered hover>
@@ -14,30 +46,15 @@ function Subscriptions() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Hellen</td>
-            <td>Wainaina</td>
-            <td>Monthly</td>
+          {subscriptions.map((subscription) => (
+            <tr key={subscription.id}>
+            <td>{subscription.id}</td>
+            <td>{subscription.first_name}</td>
+            <td>{subscription.last_name}</td>
+            <td>{subscription.subscription}</td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>John</td>
-            <td>Doe</td>
-            <td>Yearly</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Larry</td>
-            <td>Madowo</td>
-            <td>Daily</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Otieno</td>
-            <td>Onyango</td>
-            <td>Daily</td>
-          </tr>
+          ))}
+          
         </tbody>
       </Table>
     </div>

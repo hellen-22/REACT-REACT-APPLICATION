@@ -9,7 +9,7 @@ function About() {
 
   useEffect(() => {
     console.log("About screen has started");
-  });
+  },[]);
 
   return (
     <div>
