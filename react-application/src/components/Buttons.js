@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 
 function Buttons({ text }) {
   return (
-    <Button>
+    <Button style={{ backgroundColor: "black", border:"None" }}>
       {text}
     </Button>
   )

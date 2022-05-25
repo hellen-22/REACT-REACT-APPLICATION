@@ -7,7 +7,7 @@ function Home() {
 
   useEffect(() => {
     console.log("Home screen has started")
-  })
+  },[])
 
   return (
     <div className="Home">
