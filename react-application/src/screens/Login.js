@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button, Col} from "react-bootstrap";
 import Header from "../components/Header";
+import Buttons from "../components/Buttons";
 
 function Login() {
   return (
@@ -20,9 +21,7 @@ function Login() {
           </Form.Group>
         </Col>
         <Col>
-          <Button variant="primary" type="submit">
-            LogIn
-          </Button>
+          <Buttons text="LogIn" />
         </Col>
       </Form>
     </div>

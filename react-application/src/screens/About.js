@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "react-bootstrap"
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import Buttons from "../components/Buttons";
 
 function About() {
-  
   const [follow, setFollow] = useState("Follow");
 
   useEffect(() => {
     console.log("About screen has started");
-  },[]);
+  }, []);
 
   return (
     <div>
       <Header />
       <h1>This is About page</h1>
       <div>
-          <Link to="/home" className="nav-link">
-          <Button>Go to Home Page</Button>
-          </Link>
+        <Link to="/home" className="nav-link">
+          <Buttons text="Go to Home Page" />
+        </Link>
       </div>
       <div>
         <p>
@@ -28,11 +28,8 @@ function About() {
           onClick={() => {
             setFollow("Following");
           }}
-        >
-          {follow}
-        </Button>
+          >{follow}</Button>
       </div>
-      
     </div>
   );
 }

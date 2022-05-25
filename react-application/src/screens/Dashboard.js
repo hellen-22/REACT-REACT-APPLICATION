@@ -9,8 +9,8 @@ function Dashboard() {
   return (
     <div className="Dashboard">
       <Header />
-      < Card  />
-      < Subscriptions />
+      <Card  />
+      <Subscriptions />
     </div>
   );
 }

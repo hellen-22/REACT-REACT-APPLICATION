@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Card, Button} from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import img from "./../images/logo512.png";
+import Buttons from "./Buttons";
 
 function Cards() {
   const [cards, setCard] = useState([
@@ -27,19 +28,20 @@ function Cards() {
     },
   ]);
   return (
-    <div>
+    <Row>
+      <Col xs={4}>
         {cards.map((card) => (
-            <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src={card.image} />
             <Card.Body>
               <Card.Title>{card.title}</Card.Title>
               <Card.Text>{card.text}</Card.Text>
-              <Button variant="primary">{card.button}</Button>
+              <Buttons text="Pay Subscription"/>
             </Card.Body>
           </Card>
         ))}
-      
-    </div>
+      </Col>
+    </Row>
   );
 }
 

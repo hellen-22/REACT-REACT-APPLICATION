@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import Header from "../components/Header";
+import Buttons from "../components/Buttons";
 
 function Register() {
   return (
@@ -38,9 +39,7 @@ function Register() {
           </Form.Group>
         </Col>
         <Col>
-          <Button variant="primary" type="submit">
-            SignUp
-          </Button>
+          <Buttons text="SignUp" />
         </Col>
       </Form>
     </div>
