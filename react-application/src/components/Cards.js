@@ -29,8 +29,8 @@ function Cards() {
   ]);
   return (
     <Row>
-      <Col xs={4}>
         {cards.map((card) => (
+          <Col xs={4}>
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src={card.image} />
             <Card.Body>
@@ -39,8 +39,8 @@ function Cards() {
               <Buttons text="Pay Subscription"/>
             </Card.Body>
           </Card>
+          </Col>
         ))}
-      </Col>
     </Row>
   );
 }
