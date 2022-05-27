@@ -1,29 +1,35 @@
 import React, { useEffect, useState } from "react";
+import { Form, Col, Row } from "react-bootstrap"
 import axios from "axios";
 import Header from "./Header";
 
 function DataFetch() {
-  const [posts, setPosts] = useState([]);
+  const [post, setPost] = useState({});
+  const [id, setId] = useState(1)
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/posts")
+      .get(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((res) => {
         console.log(res);
-        setPosts(res.data);
+        setPost(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  },[]);
+  },[id]);
   return (
     <div>
       <Header />
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
+      <Row>
+      <Col xs={6}>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>LastName</Form.Label>
+            <Form.Control type="text" placeholder="Enter LastName" value={id} onChange={e => setId(e.target.value)} />
+          </Form.Group>
+      </Col>
+      </Row>
+      <p>{post.title}</p>
     </div>
   );
 }
