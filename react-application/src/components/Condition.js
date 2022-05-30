@@ -3,14 +3,12 @@ import Subscriptions from "./Subscriptions";
 import Buttons from "./Buttons";
 
 function Condition() {
-  const [state, setState] = useState(true);
+  const [state, setState] = useState(false);
 
   return (
     <div>
-      <Buttons text="Show Table" onClick={() => setState(prevState => !prevState)}>
-        Show Table
-      </Buttons>
-      {!state ? <Subscriptions /> : null}
+      <Buttons text={state} onClick={() => setState(prevState => !prevState)}/>
+      {state ? <Subscriptions /> : null}
     </div>
   );
 }
