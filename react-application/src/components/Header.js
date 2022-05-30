@@ -33,16 +33,6 @@ function Header() {
                 Login
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/hooks">
-                Hooks
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/data">
-                Data
-              </Link>
-            </li>
           </ul>
         </div>
       </nav>

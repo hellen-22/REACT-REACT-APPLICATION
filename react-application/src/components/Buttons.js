@@ -1,16 +1,16 @@
-import React from 'react';
+import React  from 'react';
 import { Button } from "react-bootstrap";
 
-function Buttons({ text }) {
+function Buttons({ text, onClick }) {
   return (
-    <Button style={{ backgroundColor: "black", border:"None" }}>
+    <Button style={{ backgroundColor: "black", border:"None" }} onClick={onClick} >
       {text}
     </Button>
   )
 }
 
 Buttons.defaultProps = {
-  text : "Button"
+  text : "Button",
 }
 
 export default Buttons;

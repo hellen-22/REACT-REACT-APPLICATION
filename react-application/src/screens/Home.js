@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
 import Header from "../components/Header";
+import Buttons from "../components/Buttons";
 
 function Home() {
   const [status, setStatus] = useState("Approve");
@@ -15,13 +15,13 @@ function Home() {
       <h1>This is Home page</h1>
       <div>
         <p>Click for Approval</p>
-        <Button
+        <Buttons text={status}
           onClick={() => {
             setStatus("Approved");
           }}
         >
-          {status}
-        </Button>
+
+        </Buttons>
       </div>
     </div>
       

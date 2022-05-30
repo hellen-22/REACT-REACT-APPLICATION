@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "react-bootstrap"
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import Buttons from "../components/Buttons";
@@ -24,11 +23,11 @@ function About() {
         <p>
           Hellen follows you. Click <b>Follow</b> to follow back
         </p>
-        <Button
+        <Buttons text={follow}
           onClick={() => {
             setFollow("Following");
           }}
-          >{follow}</Button>
+        />
       </div>
     </div>
   );
